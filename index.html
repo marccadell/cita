@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación Especial</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Pantalla de Bienvenida -->
+    <div class="screen fade-in" id="welcome"> <!-- Aquí la clase fade-in inicial -->
+        <h1>Tengo algo especial preparado para ti…</h1>
+        <button onclick="goToScreen('intrigue1')">Continuar</button>
+    </div>
+  
+  <!-- Pantallas Intrigantes -->
+  <div class="screen hidden" id="intrigue1">
+    <h2>Es algo que te hará sonreír…</h2>
+    <button onclick="goToScreen('intrigue2')">Continuar</button>
+  </div>
+
+  <div class="screen hidden" id="intrigue2">
+    <h2>Un detalle pensado solo para ti…</h2>
+    <button onclick="goToScreen('question')">Continuar</button>
+  </div>
+
+  <!-- Pantalla de Pregunta Clave -->
+  <div class="screen hidden" id="question">
+    <h2>¿Aceptarías una invitación a descubrir este plan conmigo?</h2>
+    <button onclick="goToScreen('details')">¡Claro que sí!</button>
+    <button onclick="goToScreen('details')">Dime más…</button>
+  </div>
+
+  <!-- Pantalla de Respuesta Afirmativa -->
+  <div class="screen hidden" id="details">
+    <h2>¡Me alegra saber que estás interesada! 🫠</h2>
+    <button onclick="goToScreen('more-info')">Continuar</button>
+  </div>
+
+  <!-- Pantalla de Más Información -->
+  <div class="screen hidden" id="more-info">
+    <h2>Déjame darte una pista...</h2>
+    <p>Es un restaurante con el mejor sushi de Barcelona, con fusión brasileña.</p>
+    <button onclick="goToScreen('confirmation')">¡Me encanta!</button>
+  </div>
+
+  <!-- Pantalla de Confirmación Final -->
+  <div class="screen hidden" id="confirmation">
+    <h2>¡Perfecto! No puedo esperar para compartir este momento contigo. 🌹</h2>
+    <button onclick="goToScreen('result')">Continuar</button>
+</div>
+
+  <div class="screen hidden" id="result">
+    <h2>Ahora mírame, que día te va bien 😉</h2>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

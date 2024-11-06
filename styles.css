@@ -1,0 +1,72 @@
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fcb824d3;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+h2 {
+    margin: 5px;
+}
+/* Pantalla */
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animaciones */
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffa319;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #df8b0f;
+}
+
+/* Estilo para los emojis de sushi */
+.sushi-emoji {
+    position: absolute;
+    font-size: 24px;
+    pointer-events: none;
+    opacity: 0;
+}
